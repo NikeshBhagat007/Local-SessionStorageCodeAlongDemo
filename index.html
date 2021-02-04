@@ -7,15 +7,18 @@
 </head>
 <body>
     <h2>Storage Example</h2>
+    <input type="radio" id="local" name="storageType" value="local" onclick="selectStorageType(this.id)">
+    <label for="local">Local</label>
+    <input type="radio" id="session" name="storageType" value="session" onclick="selectStorageType(this.id)">
+    <label for="session">Session</label>
     <p>
         Key   <input type="text" id="key">
         Value <input type="text" id="value">
               <input type="submit" id="submit" onclick="addStorage()">
     </p>
-    <p>getKey<input type="submit" id="getkey" onclick="getKey()"> </p>
-    <p>getLength<input type="submit" id="getlen" onclick="localLength()"> </p>
-    <p>Clear<input type="submit" id="clear" onclick="localClear()"> </p>
-    <p>Remove key<input type="submit" id="remove" onclick="remove()"> </p>
+    <p>getKey<input type="text" id="getkey" onclick="getKey()"> </p>
+    <p>getLength<input type="submit" value="getlen" onclick="localLength()"> </p>
+    <p>Clear<input type="submit" value="clear" onclick="localClear()"> </p>
     <script src="./app.js"></script>
 </body>
 </html>
